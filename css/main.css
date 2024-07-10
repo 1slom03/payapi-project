@@ -31,6 +31,10 @@ body {
   font-family: "DM Serif Display";
   font-family: "Public Sans";
   background-color: #EDF3F8;
+  background-image: url(../../images/hero-bg-img.png);
+  background-repeat: no-repeat;
+  background-size: 640px 608px;
+  background-position: top right;
 }
 
 .container {
@@ -114,7 +118,7 @@ body {
   display: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .site-header {
     padding-bottom: 48px;
   }
@@ -129,7 +133,10 @@ body {
     height: 38px;
   }
 }
-@media (max-width: 550px) {
+@media (max-width: 736px) {
+  .header {
+    gap: 164px;
+  }
   .header__list {
     display: none;
   }
@@ -147,8 +154,8 @@ body {
     display: block;
   }
 }
-.site-main {
-  padding: 0 0 75px;
+.hero-section {
+  padding: 180px 0 75px;
 }
 
 .hero {
@@ -189,7 +196,7 @@ body {
 
 .hero__input-btn {
   position: absolute;
-  left: calc(50% - 272px);
+  right: 0;
   width: 178px;
   padding: 16px 24.5px 16px 26.5px;
   background-color: rgb(186, 66, 112);
@@ -227,6 +234,19 @@ body {
   margin-bottom: 16px;
 }
 
+@media (max-width: 936px) {
+  .hero {
+    flex-direction: column-reverse;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 24.27px;
+    text-align: center;
+  }
+  .hero__input-btn {
+    left: 428px;
+  }
+}
 .work-section {
   padding: 100px 0;
   background-image: url(../../images/work-section-bg.png);

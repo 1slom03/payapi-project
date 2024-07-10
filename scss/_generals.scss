@@ -10,4 +10,8 @@ body{
     font-family: 'DM Serif Display';
     font-family: 'Public Sans';
     background-color: $color-bg;
+    background-image: url(../../images/hero-bg-img.png);
+    background-repeat: no-repeat;
+    background-size: 640px 608px;
+    background-position: top right;
 }

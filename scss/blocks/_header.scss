@@ -55,7 +55,7 @@
 }
 
 // --------Tablet-----
-@media (max-width:768px){
+@media (max-width:900px){
     .site-header{
         padding-bottom: 48px;
     }
@@ -69,7 +69,10 @@
 }
 
 // --------Mobile-----
-@media (max-width:550px){
+@media (max-width:736px){
+    .header{
+        gap: 164px;
+    }
     .header__list{
         display: none;
     }

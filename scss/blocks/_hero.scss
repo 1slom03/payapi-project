@@ -1,5 +1,7 @@
 .site-main{
-    padding:0 0 75px;
+}
+.hero-section{
+    padding:180px 0 75px;
 }
 .hero {
     @include display($items:center, $space:start, $gap:206px);
@@ -24,7 +26,7 @@
 }
 .hero__input-btn {
     position: absolute;
-    left: calc(50% - 272px);
+    right: 0;
     width: 178px;
     padding: 16px 24.5px 16px 26.5px;
     background-color: $clr-hover;
@@ -47,8 +49,13 @@
     @include textStyle($FS:15px, $FW:700, $LH:17.63px, $CLR:#6C8294, $CASE:unset, $MB:16px);
 }
 
-
-
-@media (max-width:960px){
-   
+@media (max-width:936px){
+   .hero{
+        flex-direction: column-reverse;
+        @include display($items:center, $space:start, $gap:24.27px);
+         text-align: center;
+   }
+   .hero__input-btn{
+        left: 428px;
+    }
 }
