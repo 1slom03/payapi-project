@@ -1,0 +1,89 @@
+.site-header {
+    padding: 40px 0 74px;
+    
+}
+.header {
+    @include display($items:center, $space:space-between, $gap:0px);
+}
+.header__link-wrapper{
+    max-width: 432px;
+    @include display($items:center, $space:start, $gap:64px);
+}
+.header__logo-img {
+}
+.header__list {
+    @include display($items:center, $space:start, $gap:40px);
+}
+.header__item {
+}
+.header__item-link {
+    @include textStyle($FS:15px, $FW:700, $LH:17.63px, $CLR:$clr-link-text, $CASE:unset, $MB:0px);
+    font-family: 'Public Sans';
+    transition: all 0.3s linear;
+
+    &:hover{
+        color: $clr-hover;
+    }
+}
+.header__btn {
+    max-width: 178px;
+    padding: 16px 24.5px 14px 26.5px;
+    background-color: $clr-hover;
+    border: 1px solid $clr-hover;
+    border-radius: 50px;
+    @include textStyle($FS:15px, $FW:700, $LH:17.63px, $CLR:$color-white, $CASE:unset, $MB:0px);
+    text-align: center;
+    font-family: 'Public Sans';
+    transition: all 0.3s linear;
+
+    &:hover{
+        background-color: rgba(218, 109, 151, 1);
+        border:1px solid rgba(218, 109, 151, 1);
+    }
+}
+.header__hamburger-btn{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: none;
+}
+.header__hamburger-img{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: none;
+}
+
+// --------Tablet-----
+@media (max-width:768px){
+    .site-header{
+        padding-bottom: 48px;
+    }
+    .header{
+         @include display($items:center, $space:center, $gap:84px);
+    }
+    .header__logo-img {
+        width: 135px;
+        height: 38px;
+    }
+}
+
+// --------Mobile-----
+@media (max-width:550px){
+    .header__list{
+        display: none;
+    }
+    .header__btn{
+        display: none;
+    }
+    .header__logo-img {
+        width: 135px;
+        height: 38px;
+    }
+    .header__hamburger-btn{
+        display: block;
+    }
+    .header__hamburger-img{
+        display: block;
+    }
+}

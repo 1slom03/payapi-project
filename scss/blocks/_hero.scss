@@ -1,0 +1,54 @@
+.site-main{
+    padding:0 0 75px;
+}
+.hero {
+    @include display($items:center, $space:start, $gap:206px);
+}
+.hero__content-wrapper {
+    max-width: 546px;
+}
+.hero__content-title {
+    @include textStyle($FS:72px, $FW:400, $LH:72px, $CLR:$clr-link-text, $CASE:unset, $MB:21px);
+    font-family: 'DM Serif Display';
+}
+.hero-input-wrapper {
+}
+.hero__input {
+    position: relative;
+    width: 445px;
+    padding: 16px 190px 14px 27px;
+    @include textStyle($FS:15px, $FW:700, $LH:17.63px, $CLR:#9FACB8, $CASE:unset, $MB:16px);
+    font-family: 'Public Sans';
+    border: 1px solid $color-bg;
+    border-radius: 50px;
+}
+.hero__input-btn {
+    position: absolute;
+    left: calc(50% - 272px);
+    width: 178px;
+    padding: 16px 24.5px 16px 26.5px;
+    background-color: $clr-hover;
+    border: 1px solid $clr-hover;
+    border-radius: 50px;
+    @include textStyle($FS:15px, $FW:700, $LH:17.63px, $CLR:$color-white, $CASE:unset, $MB:0px);
+    font-family: 'Public Sans';
+    transition: all 0.3s linear;
+
+        &:hover{
+            background-color: rgba(218, 109, 151, 1);
+            border:1px solid rgba(218, 109, 151, 1);
+        }
+}
+.hero__content-text {
+    @include textStyle($FS:15px, $FW:400, $LH:17.63px, $CLR:#9FACB8, $CASE:unset, $MB:16px);
+
+}
+.hero__content-text-link {
+    @include textStyle($FS:15px, $FW:700, $LH:17.63px, $CLR:#6C8294, $CASE:unset, $MB:16px);
+}
+
+
+
+@media (max-width:960px){
+   
+}

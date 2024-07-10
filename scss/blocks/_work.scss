@@ -1,0 +1,40 @@
+.work-section {
+    padding: 100px 0;
+    background-image: url(../../images/work-section-bg.png);
+    background-repeat: no-repeat;
+    
+}
+.work {
+    @include display($items:center, $space:space-between, $gap:0px);
+
+}
+.work__content-wrapper {
+    max-width: 445px;
+}
+.work__content-title {
+    @include textStyle($FS:48px, $FW:400, $LH:56px, $CLR:$color-white, $CASE:unset, $MB:24px);
+    font-family: 'DM Serif Display';
+}
+.work__content-text {
+    @include textStyle($FS:15px, $FW:400, $LH:28px, $CLR:rgb(255, 255, 255, 1), $CASE:unset, $MB:32px);
+}
+.work__content-btn {
+    padding: 16px 32px; 
+    @include textStyle($FS:15px, $FW:700, $LH:17.63px, $CLR:rgb(255, 255, 255, 1), $CASE:unset, $MB:0px);
+    font-family: 'Public Sans';
+    border: 1px solid $color-white;
+    border-radius: 50px;
+    background-color: transparent;
+    color: $color-white;
+
+    &:hover{
+        background-color: $color-white;
+        color: $clr-link-text;
+    }
+}
+.work__link-wrapper {
+    width: 536px;
+    @include display($items:center, $space:space-between, $gap:40px);
+    flex-wrap: wrap;
+
+}
