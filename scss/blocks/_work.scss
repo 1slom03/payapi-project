@@ -1,40 +1,74 @@
 .work-section {
     padding: 100px 0;
+    background-color: $work-section-bg;
     background-image: url(../../images/work-section-bg.png);
     background-repeat: no-repeat;
-    
+    background-size: 545px 421px;
+    background-position: left top;
 }
 .work {
     @include display($items:center, $space:space-between, $gap:0px);
-
 }
 .work__content-wrapper {
-    max-width: 445px;
+    width: 445px;
 }
 .work__content-title {
-    @include textStyle($FS:48px, $FW:400, $LH:56px, $CLR:$color-white, $CASE:unset, $MB:24px);
-    font-family: 'DM Serif Display';
+    @include textStyle($FS:48px, $FW:400, $LH:56px, $CLR:$color-white, $CASE:inherit, $MB:24px);
 }
 .work__content-text {
-    @include textStyle($FS:15px, $FW:400, $LH:28px, $CLR:rgb(255, 255, 255, 1), $CASE:unset, $MB:32px);
+    @include textStyle($FS:15px, $FW:400, $LH:28px, $CLR:$text-opacity, $CASE:inherit, $MB:32px);
 }
 .work__content-btn {
-    padding: 16px 32px; 
-    @include textStyle($FS:15px, $FW:700, $LH:17.63px, $CLR:rgb(255, 255, 255, 1), $CASE:unset, $MB:0px);
-    font-family: 'Public Sans';
-    border: 1px solid $color-white;
-    border-radius: 50px;
-    background-color: transparent;
-    color: $color-white;
+    display: inline-block;
+    @include ButtonStyle($btn-w:129px, $btn-py:15px, $btn-bg-clr:$work-section-bg, $btn-bg-radius:26px, $btn-border-clr:$color-white, $btn-fs:15px, $btn-fw:700, $btn-lh:17px, $btn-clr:$color-white, $btn-case:unset);
 
     &:hover{
-        background-color: $color-white;
-        color: $clr-link-text;
+        background-color: rgb(255, 255, 255);
+        color: $work-section-bg;
     }
 }
 .work__link-wrapper {
+    @include display($items:center, $space:start, $gap:55px);
     width: 536px;
-    @include display($items:center, $space:space-between, $gap:40px);
     flex-wrap: wrap;
+}
+.work__link {
+    display: inline-block;
+    margin: 0 auto;
+}
 
+
+
+@media (max-width:1030px){
+    .work-section {
+        padding: 88px 0;
+        background-image: url(../../images/work-tablet-bg.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center top;
+    }
+    .work {
+        @include display($items:center, $space:start, $gap:64px);
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+}
+
+@media (max-width:580px){
+    .work-section {
+        padding: 80px 0;
+    }
+    .work__link-wrapper {
+        @include display($items:center, $space:start, $gap:30px);
+        width: 100%;
+    }
+    .work__content-wrapper {
+        max-width: 100%;
+    }
+    .work__content-title {
+        @include textStyle($FS:32px, $FW:400, $LH:36px, $CLR:$color-white, $CASE:inherit, $MB:16px);
+    }
+    .work__content-text {
+        @include textStyle($FS:15px, $FW:400, $LH:28px, $CLR:$text-opacity, $CASE:inherit, $MB:60px);
+    }
 }

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="./images/site-logo.svg">
+    <link rel="icon" href="./images/site-icon.svg">
     <link rel="stylesheet" href="./css/main.css">
     <title>Payapi</title>
 </head>
@@ -29,7 +29,7 @@
                 </div>
                 <a class="header__btn" href="#">Schedule a Demo</a>
                 <button class="header__hamburger-btn">
-                    <img class="header__hamburger-img" src="./images/menu-icon.svg" alt="hamburger-icon">
+                    <img class="header__hamburger-img" src="./images/menu-icon.svg" alt="hamburger-icon" width="28" height="17">
                 </button>
             </div>
         </div>    
@@ -39,17 +39,17 @@
         <section class="hero-section">
             <div class="container">
                 <div class="hero">
-                    <div class="hero__content-wrapper">
-                        <h1 class="hero__content-title">Start building with our APIs for absolutely free.</h1>
-                        <form class="hero-input-wrapper" action="https://echo.htmlacademy.ru">
-                            <input class="hero__input" type="text" name="user-email" placeholder="Enter email address" aria-label="user-email" required>
-                            <button class="hero__input-btn" type="submit">Schedule a Demo</button>
+                    <div class="hero__content-wrapper ">
+                        <h1 class="hero__title">Start building with our APIs for absolutely free.</h1>
+                        <form class="hero__form form" action="https://echo.htmlacademy.ru" method="post" autocomplete="off">
+                            <label class="form__label">
+                                <input class="form__input" type="text" name="user-name" placeholder="Enter email address" aria-label="user-email" required>
+                                <button class="form__btn" type="submit">Schedule a Demo</button>
+                            </label>
                         </form>
-                        <p class="hero__content-text">Have any questions? <a class="hero__content-text hero__content-text-link" href="#">Contact Us</a></p>
+                        <p class="hero__bottom-text">Have any questions? <a class="hero__bottom-text hero__bottom-text-link" href="#">Contact Us</a></p>
                     </div>
-                    <div class="hero__img-wrapper">
-                        <img class="hero__img" src="./images/hero-section-img.png" alt="hero-phone" width="263" height="500">
-                    </div>
+                    <img class="hero__img" src="./images/hero-section-img.png" alt="hero-phone" width="263" height="500">
                 </div>
             </div>
         </section>
@@ -80,6 +80,29 @@
                         <a class="work__link" href="#">
                             <img class="work__link-img" src="./images/nvidia-icon.svg" alt="nvidia-icon" width="137" height="26">
                         </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="easy-section">
+            <div class="container">
+                <div class="easy">
+                    <div class="easy__first-box">
+                        <img class="easy__first-box-img" src="./images/first-box-img.png" alt="code-img" width="445" height="284">
+                        <div class="easy__content">
+                            <h2 class="easy__title">Easy to implement</h2>
+                            <p class="easy__text">Our API comes with just a few lines of code. You'll be up and running in no time. We built our documentation page to integrate payments functionality with ease.</p>
+                        </div>
+                    </div>
+                    <div class="easy__second-box">
+                        <div class="easy__content">
+                            <h2 class="easy__title">Simple UI & UX</h2>
+                            <p class="easy__text">Our pre-built form is easy to integrate in your app or website's checkout flow and designed to optimize conversion. </p>
+                        </div>
+                        <div class="easy__images">
+                            <img class="easy__second-box-img" src="./images/second-box-img.png" alt="phone-img" width="262" height="500">
+                            <img class="easy__second-box-img" src="./images/second-box-img2.png" alt="phone-img" width="262" height="500">
+                        </div>
                     </div>
                 </div>
             </div>

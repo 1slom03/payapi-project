@@ -1,0 +1,91 @@
+.easy-section{
+    padding: 150px 0 0 0;
+    background-image: url(../../images/easy-section-bg.png);
+    background-repeat: no-repeat;
+    background-size: 390px 780px;
+    background-position: calc(50% - -500px) bottom;
+}
+.easy__first-box {
+    @include display($items:center, $space:space-between, $gap:125px);
+}
+.easy__content {
+    width: 445px;
+}
+.easy__title {
+    @include textStyle($FS:48px, $FW:400, $LH:56px, $CLR:$title-clr, $CASE:inherit, $MB:24px);
+}
+.easy__text {
+    @include textStyle($FS:15px, $FW:400, $LH:28px, $CLR:
+    rgba(108, 130, 148, 1), $CASE:inherit, $MB:0px);
+}
+.easy__second-box {
+    padding: 150px 0 140px 0;
+    @include display($items:center, $space:space-between, $gap:95px); 
+}
+.easy__images {
+    @include display($items:center, $space:start, $gap:40px);
+}
+
+
+@media (max-width:1000px){
+    .easy-section{
+        padding: 100px 0 0 0;
+    }
+    .easy__first-box {
+        flex-direction: column;
+        text-align: center;
+        @include display($items:center, $space:space-between, $gap:48px);
+    }
+    .easy__first-box-img{
+        width: 391px;
+        height: 250px;
+    }
+    .easy__second-box {
+        padding: 100px 0 100px 0;
+        @include display($items:center, $space:space-between, $gap:48px); 
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    .easy__images{
+        gap: 25px;
+    }
+    .easy__second-box-img{
+        width: 168px;
+        height: 320px;
+    }
+}
+
+
+
+
+@media (max-width:610px){
+    .easy-section{
+        padding: 80px 0 0 0;
+    }
+    .easy__first-box {
+        flex-direction: column;
+        text-align: center;
+        @include display($items:center, $space:space-between, $gap:48px);
+    }
+    .easy__first-box-img{
+        width: 328px;
+        height: 209px;
+    }
+    .easy__title {
+        @include textStyle($FS:36px, $FW:400, $LH:36px, $CLR:$title-clr, $CASE:inherit, $MB:24px);
+    }
+    .easy__second-box {
+        padding: 80px 0 80px 0;
+        @include display($items:center, $space:space-between, $gap:48px); 
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    .easy__images{
+        gap: 24px;
+    }
+    .easy__second-box-img{
+        width: 152px;
+        height: 290px;
+    }
+
+}

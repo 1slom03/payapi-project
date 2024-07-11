@@ -1,61 +1,122 @@
-.site-main{
-}
-.hero-section{
-    padding:180px 0 75px;
+.hero-section {
+    padding-bottom: 75px;
 }
 .hero {
     @include display($items:center, $space:start, $gap:206px);
+
 }
 .hero__content-wrapper {
-    max-width: 546px;
+    width: 546px;
 }
-.hero__content-title {
-    @include textStyle($FS:72px, $FW:400, $LH:72px, $CLR:$clr-link-text, $CASE:unset, $MB:21px);
-    font-family: 'DM Serif Display';
+.hero__title {
+    @include textStyle($FS:72px, $FW:400, $LH:72px, $CLR:$title-clr, $CASE:inherit, $MB:21px);
 }
-.hero-input-wrapper {
-}
-.hero__input {
-    position: relative;
+.hero__form {
     width: 445px;
-    padding: 16px 190px 14px 27px;
-    @include textStyle($FS:15px, $FW:700, $LH:17.63px, $CLR:#9FACB8, $CASE:unset, $MB:16px);
-    font-family: 'Public Sans';
-    border: 1px solid $color-bg;
-    border-radius: 50px;
+    margin-bottom: 16px;
 }
-.hero__input-btn {
+.form__label {
+    width: 100%;
+    position: relative;
+}
+.form__input {
+    width: 100%;
+    padding: 15px 180px 15px 27px;
+    box-shadow: 10px 10px 25px -10px #36536B40;
+    border-radius: 24px;
+    outline: none;
+    border: none;
+    @include textStyle($FS:15px, $FW:700, $LH:17px, $CLR:$title-clr, $CASE:inherit, $MB:0px);
+
+    &::placeholder{
+        opacity: 70%;
+    }
+
+
+    &:focus{
+        box-shadow: 0 0 5px 1px #36536B40;
+    }
+}
+.form__btn {
     position: absolute;
     right: 0;
-    width: 178px;
-    padding: 16px 24.5px 16px 26.5px;
-    background-color: $clr-hover;
-    border: 1px solid $clr-hover;
-    border-radius: 50px;
-    @include textStyle($FS:15px, $FW:700, $LH:17.63px, $CLR:$color-white, $CASE:unset, $MB:0px);
-    font-family: 'Public Sans';
-    transition: all 0.3s linear;
+    @include ButtonStyle($btn-w:173px,$btn-py:14px,$btn-bg-clr:$pink-clr,$btn-bg-radius:26px, $btn-border-clr:transparent, $btn-fs:15px, $btn-fw:700, $btn-lh:17px, $btn-clr:$text-clr, $btn-case:unset) 
+    
+}
+.hero__bottom-text {
+    margin-left: 27px;
+    @include textStyle($FS:15px, $FW:400, $LH:17px, $CLR:#6C8294, $CASE:inherit, $MB:0px);
+}
+.hero__bottom-text-link {
+    margin-left: 0;
+    @include textStyle($FS:15px, $FW:700, $LH:17px, $CLR:#6C8294, $CASE:inherit, $MB:0px);
+}
 
-        &:hover{
-            background-color: rgba(218, 109, 151, 1);
-            border:1px solid rgba(218, 109, 151, 1);
-        }
-}
-.hero__content-text {
-    @include textStyle($FS:15px, $FW:400, $LH:17.63px, $CLR:#9FACB8, $CASE:unset, $MB:16px);
 
-}
-.hero__content-text-link {
-    @include textStyle($FS:15px, $FW:700, $LH:17.63px, $CLR:#6C8294, $CASE:unset, $MB:16px);
-}
+
 
 @media (max-width:936px){
-   .hero{
+    .hero{
+        @include display($items:center, $space:start, $gap:206px);
+    }
+}
+
+@media (max-width:855px){
+    .hero{
+        @include display($items:center, $space:space-between, $gap:48px);
         flex-direction: column-reverse;
-        @include display($items:center, $space:start, $gap:24.27px);
-         text-align: center;
-   }
-   .hero__input-btn{
-        left: 428px;
+        text-align: center;
+    }
+    .hero__img{
+        width: 159px;
+        height: 300px;
+    }
+    .hero__content-wrapper{
+        width: 90%;
+    }
+    .hero__title{
+        @include textStyle($FS:48px, $FW:400, $LH:56px, $CLR:$title-clr, $CASE:inherit, $MB:22px);
+    }
+    .hero__form{
+        margin: 0 auto;
+        margin-bottom: 16px;
+    }
+}
+
+
+// ------mobile--------------------
+
+@media (max-width:583px){
+    .hero-section{
+        padding-bottom: 80px;
+    }
+    .hero{
+        @include display($items:center, $space:space-between, $gap:24px);
+    }
+    .hero__img{
+        width: 127px;
+        height: 239px;
+    }
+    .hero__content-wrapper{
+        width: 100%;
+    }
+    .hero__title{
+        @include textStyle($FS:32px, $FW:400, $LH:36px, $CLR:$title-clr, $CASE:inherit, $MB:24px);
+    }
+    .hero__form{
+        width: 100%;
+        margin: 0 auto;
+        margin-bottom: 16px;
+    }
+    .form__label{
+        @include display($items:start, $space:start, $gap:16px);
+        flex-direction: column;
+    }
+    .form__input{
+        padding-right: 5px;
+    }
+    .form__btn{
+        position: static;
+        @include ButtonStyle($btn-w:100%, $btn-py:14px, $btn-bg-clr:$pink-clr, $btn-bg-radius:26px, $btn-border-clr:transparent, $btn-fs:15px, $btn-fw:700, $btn-lh:17px, $btn-clr:$text-clr, $btn-case:unset)  
     }
 }
