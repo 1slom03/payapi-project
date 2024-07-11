@@ -40,6 +40,9 @@
         width: 391px;
         height: 250px;
     }
+    .easy__content{
+        max-width: 100%;
+    }
     .easy__second-box {
         padding: 100px 0 100px 0;
         @include display($items:center, $space:space-between, $gap:48px); 
