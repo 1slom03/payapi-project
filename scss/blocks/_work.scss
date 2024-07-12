@@ -29,7 +29,7 @@
 }
 .work__link-wrapper {
     @include display($items:center, $space:start, $gap:55px);
-    width: 536px;
+    max-width: 536px;
     flex-wrap: wrap;
 }
 .work__link {
@@ -54,13 +54,17 @@
     }
 }
 
-@media (max-width:580px){
+@media (max-width:600px){
     .work-section {
         padding: 80px 0;
     }
     .work__link-wrapper {
-        @include display($items:center, $space:start, $gap:30px);
+        @include display($items:center, $space:start, $gap:25px);
+        text-align: center;
         width: 100%;
+    }
+    .work__link{
+        display: inline-block;
     }
     .work__content-wrapper {
         max-width: 100%;
@@ -70,5 +74,8 @@
     }
     .work__content-text {
         @include textStyle($FS:15px, $FW:400, $LH:28px, $CLR:$text-opacity, $CASE:inherit, $MB:60px);
+    }
+    .work__content-btn{
+        max-width: 128px;
     }
 }

@@ -37,7 +37,7 @@
         @include display($items:center, $space:space-between, $gap:48px);
     }
     .easy__first-box-img{
-        width: 391px;
+        max-width: 100%;
         height: 250px;
     }
     .easy__content{
@@ -50,7 +50,6 @@
         text-align: center;
     }
     .easy__images{
-        gap: 25px;
     }
     .easy__second-box-img{
         width: 168px;
@@ -68,10 +67,11 @@
     .easy__first-box {
         flex-direction: column;
         text-align: center;
+        width: 100%;
         @include display($items:center, $space:space-between, $gap:48px);
     }
     .easy__first-box-img{
-        width: 328px;
+        width: 100%;
         height: 209px;
     }
     .easy__title {
@@ -84,11 +84,10 @@
         text-align: center;
     }
     .easy__images{
-        gap: 24px;
+        @include display($items:center, $space:space-between, $gap:0px); 
     }
     .easy__second-box-img{
-        width: 152px;
+        max-width: 100%;
         height: 290px;
     }
-
 }

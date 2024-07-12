@@ -23,7 +23,12 @@
     }
 }
 .header__btn {
-    @include ButtonStyle($btn-w:173px,$btn-py:15px,$btn-bg-clr:$pink-clr,$btn-bg-radius:26px, $btn-border-clr:transparent, $btn-fs:15px, $btn-fw:700, $btn-lh:17px, $btn-clr:$text-clr, $btn-case:unset) 
+    @include ButtonStyle($btn-w:173px,$btn-py:15px,$btn-bg-clr:$pink-clr,$btn-bg-radius:26px, $btn-border-clr:transparent, $btn-fs:15px, $btn-fw:700, $btn-lh:17px, $btn-clr:$text-clr, $btn-case:unset);
+
+    &:hover{
+        opacity: 0.6;
+    }
+
 }
 .header__hamburger-btn {
     background-color: transparent;
@@ -32,6 +37,51 @@
     display: none;
 }
 
+.header__modal{
+    padding: 24px;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    height: 100vh;
+    background-color: $work-section-bg;
+    z-index: 50;
+    transition: all 0.3s linear;
+}
+.show{
+    right: 0;
+}
+.close__top-wrapper {
+    padding: 24px 0;
+    border-bottom: 1px solid white;
+    text-align: right;
+}
+.close__bg-btn {
+    background-color: transparent;
+    border: none;
+}
+.close__list {
+    padding: 32px 0 43px;
+    @include display($items:center, $space:start, $gap:32px);
+    flex-direction: column;
+}
+.close__link {
+    @include  textStyle($FS:20px, $FW:700, $LH:23px, $CLR:rgba(251, 252, 254, 1), $CASE:unset, $MB:0px);
+    opacity: 0.7;
+    
+
+    &:hover{
+        opacity: 1;
+    }
+}
+.close__link-btn {
+    display: inline-block;
+    @include ButtonStyle($btn-w:100%,$btn-py:15px,$btn-bg-clr:$pink-clr,$btn-bg-radius:26px, $btn-border-clr:transparent, $btn-fs:15px, $btn-fw:700, $btn-lh:17px, $btn-clr:$text-clr, $btn-case:unset);
+
+    &:hover{
+        opacity: 0.6;
+    }
+}
 
 @media (max-width:900px){
     .site-header{
